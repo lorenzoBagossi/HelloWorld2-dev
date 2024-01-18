@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1aplha1
+kind: Application
+metadata:
+  name: helloworld2
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: lorenzobagossi856/helloworld
+    argocd-image-updater.argoproj.io/write-back: git:secret:argocd/git-creds
+    argocd-image-updater.argoproj.io/git-branch: main
+
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/lorenzoBagossi/HelloWorld2-dev.git'
+    path: dev
+  targetRevision: HEAD
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: default
+  syncPolicy:
+    automated: {}

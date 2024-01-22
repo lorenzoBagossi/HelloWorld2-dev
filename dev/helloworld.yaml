@@ -17,6 +17,7 @@ spec:
     repoURL: https://github.com/lorenzoBagossi/HelloWorld2-dev.git
     path: dev
     targetRevision: HEAD
+    tipo: Directory
   project: default
   syncPolicy:
     automated:

@@ -15,8 +15,9 @@ spec:
     namespace: default
   source:
     repoURL: https://github.com/lorenzoBagossi/HelloWorld2-dev.git
-    path: dev
+    path: overlays/production
     targetRevision: HEAD
+    tipo: Kustomize
   project: default
   syncPolicy:
     automated:

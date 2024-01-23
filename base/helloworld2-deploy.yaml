@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world2-deployment
+  name: hello-world-deployment
   labels:
-    app: helloworld2
+    app: helloworld
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: helloworld2
+      app: helloworld
   template:
     metadata:
       labels:
-        app: helloworld2 
-      spec:    
-        containers:
-          - name: helloworld
-            image: lorenzobagossi856/helloworld:3
-            ports:
-            - containerPort: 5000
+        app: helloworld
+    spec:
+      containers:
+      - name: helloworld
+        image: lorenzobagossi856/helloworld:3
+        ports:
+        - containerPort: 5000

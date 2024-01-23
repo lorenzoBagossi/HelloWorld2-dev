@@ -13,9 +13,8 @@ spec:
     metadata:
       labels:
         app: helloworld2     
-    spec:
-      containers:
-      - name: helloworld
-        image: lorenzobagossi856/helloworld:3
-        ports:
+  containers:
+    - name: helloworld
+      image: lorenzobagossi856/helloworld:3
+      ports:
         - containerPort: 5000

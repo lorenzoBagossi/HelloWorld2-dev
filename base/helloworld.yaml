@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: helloworld
   namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd-image-updater.argoproj.io/image-list: lorenzobagossi856/helloworld
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds

@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - lorenzobagossi856/helloworld:5
+  - lorenzobagossi856/helloworld:6
